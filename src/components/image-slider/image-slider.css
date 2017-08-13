@@ -1,0 +1,65 @@
+.image-slider {
+	display: block;
+	position: relative;
+	width: auto;
+	overflow: hidden;
+}
+
+.image-slider > .slides {
+	position: relative;
+	display: block;
+	overflow: visible;
+	white-space: nowrap;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	line-height: 0;
+	transition: left 250ms ease;
+}
+
+.image-slider .slide {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #000;
+}
+
+.image-slider .slide > img {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	height: 100%;
+	width: auto;
+}
+
+.image-slider > .prev,
+.image-slider > .next {
+	position: absolute;
+	top: 50%;
+	height: 40px;
+	width: 40px;
+	margin-top: -20px;
+	background: none;
+	border: none;
+	border-top: 5px solid #fff;
+	border-right: 5px solid #fff;
+}
+
+.image-slider > .prev {
+	left: 40px;
+	transform: rotate(-135deg);
+}
+
+.image-slider > .next {
+	right: 40px;
+	transform: rotate(45deg);
+}
+
+.image-slider > .prev:hover,
+.image-slider > .next:hover {
+	border-color: #ddd;
+}
